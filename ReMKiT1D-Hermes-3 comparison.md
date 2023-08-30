@@ -44,7 +44,7 @@ where now $W_n=3nkT_n/2$ with $Q_n = -Q_{in}$.
 
 $$q_n = - \kappa_n \nabla kT_n$$
 
-<span style="color:red">#### Hermes-3</span>
+#### <span style="color:red">Hermes-3</span>
 In 1D, the Hermes-3 neutral momentum equation is handled by this [general component](https://github.com/bendudson/hermes-3/blob/master/src/evolve_momentum.cxx) which also solves the ion momentum. There is an additional [component](https://github.com/bendudson/hermes-3/blob/master/src/neutral_mixed.cxx) which adds parallel diffusion and viscosity for 1D simulations. This one has a [documentation section](https://hermes3.readthedocs.io/en/latest/components.html#neutral-parallel-diffusion).
 
 The following equation has been 
