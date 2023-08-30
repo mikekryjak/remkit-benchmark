@@ -32,6 +32,8 @@ $$q_i=-\kappa_i\nabla kT_i$$
 
 $$Q_i = Q_{h} - Q_{ei} + Q_{in}$$
 
+### Neutrals
+
 $$\begin{align}
     &\frac{\partial n_n}{\partial t} + \frac{\partial \Gamma_n}{\partial x} = - S,\\
     &m_i\frac{\partial \Gamma_n}{\partial t} + \frac{\partial}{\partial x} \left(n_nkT_n + m_i\Gamma_n u_n\right) = - R_{CX} + S^{\Gamma}_n,  \\
@@ -41,6 +43,8 @@ $$\begin{align}
 where now $W_n=3nkT_n/2$ with $Q_n = -Q_{in}$. 
 
 $$q_n = - \kappa_n \nabla kT_n$$
+
+&m_i\frac{\partial \Gamma_n}{\partial t} + \frac{\partial}{\partial x} \left(n_nkT_n + m_i\Gamma_n u_n\right) = - R_{CX} + S^{\Gamma}_n,  \\
 
 ### Electric field
 
