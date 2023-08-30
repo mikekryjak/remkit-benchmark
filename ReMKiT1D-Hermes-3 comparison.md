@@ -44,7 +44,24 @@ where now $W_n=3nkT_n/2$ with $Q_n = -Q_{in}$.
 
 $$q_n = - \kappa_n \nabla kT_n$$
 
-&m_i\frac{\partial \Gamma_n}{\partial t} + \frac{\partial}{\partial x} \left(n_nkT_n + m_i\Gamma_n u_n\right) = - R_{CX} + S^{\Gamma}_n,  \\
+<span style="color:red">#### Hermes-3</span>
+In 1D, the Hermes-3 neutral momentum equation is handled by this [general component](https://github.com/bendudson/hermes-3/blob/master/src/evolve_momentum.cxx) which also solves the ion momentum. There is an additional [component](https://github.com/bendudson/hermes-3/blob/master/src/neutral_mixed.cxx) which adds parallel diffusion and viscosity for 1D simulations. This one has a [documentation section](https://hermes3.readthedocs.io/en/latest/components.html#neutral-parallel-diffusion).
+
+The following equation has been 
+
+$$m \frac{\partial \Gamma_{n}} {\partial t} = -\frac{\partial}{\partial x} (u_{n} m \Gamma_{n}) 
+ - \frac{\partial P_{n}}{\partial x}
+ + \frac{\partial}{\partial x} (m \Gamma_n D_{n} \frac{1}{P_{n}} \frac{\partial P_{n}}{\partial x})
+ + \frac{\partial}{\partial x} (\eta_{n} u_{n})
+$$
+
+Where the parallel projection of radial diffusivity is:
+ $$D_{n} = dneut \frac{u_{th,n}^{2}}{\nu_{tot}} $$
+
+And the viscosity is:
+$$\eta_n = \frac{2}{5} \kappa_n = \frac{2}{5}n_n D_n$$
+
+Currently the diffusion has no limiter in 1D.
 
 ### Electric field
 
